@@ -1,0 +1,36 @@
+﻿@model Product
+
+<form method="post" asp-action="DeletePOST">
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary">Delete Product</h2>
+            <hr />
+        </div>
+        <div asp-validation-summary="All"></div>
+        <div class="mb-3">
+            <label asp-for="ProductId">Product Id</label>
+            <input asp-for="ProductId" disabled class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Name">Product Name</label>
+            <input asp-for="Name" disabled class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Quantity">Product Quantity</label>
+            <input asp-for="Quantity" disabled class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Price">Product Price</label>
+            <input asp-for="Price" disabled class="form-control" />
+        </div>
+        <button type="submit" class="btn btn-danger" style="width:150px">Delete</button>
+        <a asp-controller="Product" asp-action="Index" class="btn btn-secondary" style="width:150px">Back To List</a>
+
+
+    </div>
+</form> 
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}

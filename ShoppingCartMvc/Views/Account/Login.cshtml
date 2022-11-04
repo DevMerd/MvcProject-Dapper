@@ -1,0 +1,40 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login </title>
+    <link rel="stylesheet" href="/login/style.css">
+</head>
+<body>
+
+    <div class="login-box">
+        <h1>Admin Login</h1>
+        <div class="container">
+            <form>
+                <div role="alert" style="display:none !important;" id="ErrorResponse"></div>
+                <div class="form-group">
+                    <i class="fas fa-user"></i>
+                    <div class="font">Username</div>
+                    <input class="form-control" autocomplete="off" type="text" id="username" name="username">
+                    <input type="hidden" id="returnUrl" value="@ViewBag.ReturnUrl">
+                </div>
+                <div class="form-group">
+                    <i class="fas fa-lock"></i>
+                    <div class="font">Password</div>
+                    <input class="form-control" type="password" id="password" name="password">
+                </div>
+                <button type="button" class="btn" id="GirisYapBTN">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/login/login.js"></script>
+</body>
+</html>
